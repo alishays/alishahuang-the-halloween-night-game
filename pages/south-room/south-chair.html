@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset-UTF-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1">
+        <title>The Halloween Night Game</title>
+        <link rel="The Halloween night game icon" type="image/ico" href="../../images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../../styles/south-object .css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <iframe src="../../audio/background.wav" allow="autoplay" style="display:none" id="iframeAudio">
+        </iframe> 
+        <audio autoplay loop id="playAudio">
+            <source src="../../audio/background.wav" type="audio/wav">
+        </audio>
+        <div class="wrap">
+            <div class="header">
+                <a href="../../index.html"><img src="../../images/logo.png" class="logo" alt="logo"></a>
+                <ul class="nav">
+                    <li><a href="../../index.html#ready" class="nav-link">Game Story</a></li>
+                    <li><a href="../north.html" class="nav-link">Play Game</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="heading">
+                <h1>Chair - South of the Room</h1>
+            </div>
+            <div class="objects">
+                <img class="chair" src="../../images/chair.png" alt="chair image">
+            </div>
+            <div class="backBtn">
+                <a href="../south.html"><img src="../../images/buttons/go-back.png" alt="go back button"></a>
+            </div>
+            <div class="description">
+                <img class="ghost" src="../../images/ghost-with-round-eye.png" alt="ghost-with-round-eye image">
+                <p>
+                    This is a Chair
+                </p>
+            </div>
+
+            
+            <div class="girl">
+                <img src="../../images/little-girl-black.png" alt="Little-Girl-black image">
+            </div>
+
+            <div class="bat">
+                <img src="../../images/bat.png" alt="bat image">
+            </div>
+
+            <div class="threePumkin">
+                <img src="../../images/Halloween Pumpkins Witches Hat.png" alt="Halloween Pumpkins Witches Hat">
+            </div>
+
+
+            <div class="dirction">
+                <a href="../north.html"><img class="north" src="../../images/buttons/go-north.png" alt="go-north button"></a>
+                <a href="../west.html"><img class="west" src="../../images/buttons/go-west.png" alt="go-west button"></a>
+                <a href="../east.html"><img class="east" src="../../images/buttons/go-east.png" alt="go-east button"></a>
+                <a href="../south.html"><img class="south" src="../../images/buttons/go-south-orange.png" alt="go-south button"></a>
+            </div>
+        </div>
+
+    
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome){
+                $('#iframeAudio').remove()
+            }
+            else {
+                $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+            }
+        </script>
+    </body>
+</html>

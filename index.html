@@ -1,0 +1,136 @@
+<!--INFO3130-Section1-Midterm
+ * This assignment is for Assignment 4
+ * 
+ * Revision History
+ *      Alisha Huang, 2021,11,08: Created
+-->
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset-UTF-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1">
+        <title>The Halloween Night Game</title>
+        <link rel="The Halloween night game icon" type="image/ico" href="images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <iframe src="./audio/background.wav" allow="autoplay" style="display:none" id="iframeAudio">
+        </iframe> 
+        <audio autoplay loop id="playAudio">
+            <source src="./audio/background.wav" type="audio/wav">
+        </audio>
+        <div class="wrap">
+            <div class="header">
+                <a href="#"><img src="./images/logo.png" class="logo" alt="logo"></a>
+                <ul class="nav">
+                    <li><a href="#ready" class="nav-link">Game Story</a></li>
+                    <li><a href="./pages/north.html" class="nav-link">Play Game</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="homepage">
+            <div class="ghost">
+                <img src="./images/ghost-with-round-eye.png" alt="Ghost with round eyes">
+            </div>
+            <div class="bat">
+                <img src="./images/bat.png" alt="bat">
+            </div>
+            
+            <div class="text">
+                <h1>The Halloween Night</h1>
+                <a href="#ready">
+                    <img  src="./images/buttons/click-to-start.png" alt="click to start button">
+                </a>
+            </div>
+            
+        </div>
+        <div class="readyPage" id="ready">
+            <div class="ghost">
+                <img src="./images/ghost.png" alt="Ghost image">
+            </div>
+            <div class="threePumkin">
+                <img src="./images/Halloween Pumpkins Witches Hat.png" alt="Halloween Pumpkins Witches Hat">
+                <p><a href="#story">Click  to Next ></a></p>
+            </div>
+
+            <div class="text">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="500"
+                data-aos-duration="3000">
+                    At The Halloween Night
+                </h1>
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="1500"
+                data-aos-duration="3000">
+                    Are You Ready To...
+                </h1>
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="2000"
+                data-aos-duration="3000">
+                    Escape this haunted house?
+                </h1>
+            </div>
+        </div>
+
+        <div class="gameStory" id="story">
+            <div class="littleGirl">
+                <img class="girl" src="images/Little-Girl-Silhouette.png" alt="little girl image">
+                <img class="smallPumkin" src="images/pumpkin.png" alt="small pumpkin">
+            </div>
+            <div class="text">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="500"
+                data-aos-duration="3000">Welcome to The Halloween Night.</h1>
+                <h2 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="1500"
+                data-aos-duration="3000">At the Halloween night....</h2>
+                <p data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="2000"
+                data-aos-duration="3000">
+                    the little girl, Sandy, woke up, she found that she is in a room 
+                    that she does not know when she looked around the room. 
+                    This thing freaked Sandy out, so she ran to the door and tried to open the door. 
+                    However, she founded the door is locked up by an electronic door lock, 
+                    and she does not know the code for the lock. 
+                    Also, there is no other exit in the room. 
+                    Therefore, You will be the little girl, 
+                    and You needs to find clues in the room to escape the room that locked you up.
+                </p>
+            </div>
+
+            <div class="moonImg">
+                <img class="moon" src="images/moon.png" alt="moon image">
+            </div>
+
+            <div class="gameButton">
+                <a href="./pages/north.html">
+                    <img class="startBtn" src="images/buttons/start-game.png" alt="start game button">
+                </a>
+            </div>
+            
+        </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome){
+                $('#iframeAudio').remove()
+            }
+            else {
+                $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+            }
+        </script>
+    </body>
+</html>

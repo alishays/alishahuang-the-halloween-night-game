@@ -1,0 +1,383 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: "Papyrus", "Perpetua", "Agency FB", "Helvetica Neue", Arial, sans-serif;	
+    font-size: 1em;
+    text-align: center;
+	color: white;
+    background-color: #09161C;
+    width: 100%;
+    height: 100vh;
+}
+
+p{
+    font-family: "Perpetua", "Papyrus", "Agency FB", "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    font-size: 1.25em;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+  list-style: none;
+}
+
+.wrap{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+
+/*Header*/
+.header{
+    grid-column: 1/7;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: #252432;
+  }
+
+.header img {
+    float: left;
+    margin-left: 10px;
+    width: 160px;
+}
+  
+.nav{
+    overflow: hidden;
+    padding-right: 20px;
+}
+  
+.nav li{
+    font-family: "Perpetua", "Papyrus", "Agency FB", "Helvetica Neue", Arial, sans-serif;
+    list-style: none;
+    margin: 10px;
+    transition: .5s;
+    text-transform: uppercase;
+    display: inline-block; 
+    
+}
+.nav li a{
+    color: #F69949;
+    text-decoration: none;
+    font-size: 1.35em;
+    font-weight: bold;
+}  
+
+.nav li a:hover{
+    font-size: 110%;
+    color: white;
+}
+
+.nav li a::after{
+      color: #F69949;
+}
+
+/*content*/
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 100px 150px;
+    grid-gap: 0px;
+    background-image: url("../images/backgrounds/south-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:min-content;
+}
+
+.heading{
+    grid-row: 1/2;
+    grid-column: 2/6;
+}
+
+.objects{
+    grid-row: 2/3;
+    grid-column: 2/6;
+    display: inline;
+}
+
+.description{
+    grid-row: 4/5;
+    grid-column: 2/6;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.girl{
+    grid-column: 1/2;
+    grid-row: 2/5;
+}
+
+.bat{
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+
+.threePumkin{
+    grid-column: 6/7;
+    grid-row: 2/3;
+}
+
+.dirction{
+    grid-column: 6/7;
+    grid-row: 3/5;
+    display: inline;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.heading h1{
+    padding-top: 70px;
+}
+
+.objects img{
+    vertical-align: middle;
+    padding-left:50px;
+    padding-top: 10px;
+    margin-top: 50px;
+}
+
+.ghost{
+    width: 50px;
+    display: inline;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.description p{
+    display: inline;
+    text-align: left;
+    
+}
+
+.girl img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.threePumkin img{
+    width: 60px;
+    padding-top: 320px;
+}
+
+.dirction img{
+    width: 80px;
+}
+
+.backBtn{
+    grid-column: 3/5;
+    grid-row: 3/4;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.glass{
+    width: 130px;
+}
+
+.paper{
+    width: 130px;
+}
+
+
+@media screen and (max-width: 1280px){
+    .girl img{
+        width: 140px;
+    }
+
+    .dirction img{
+        width: 70px;
+    }
+
+    .deck{
+        width: 200px;
+    }
+
+    .chair{
+        width: 150px;
+    }
+    .paperWithText{
+        width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .girl img{
+        width: 130px;
+    }
+
+    .dirction img{
+        width: 70px;
+    }
+
+    .dirction {
+        grid-column: 6/7;
+        grid-row: 1/4;
+        display: inline;
+        padding-top: 150px;
+    }
+
+    .threePumkin img{
+        width: 60px;
+        padding-top: 320px;
+    }
+
+    h1{
+        font-size: 1.75em;
+    }
+
+    .backBtn img{
+        width: 150px;
+    }
+
+    .deck{
+        width: 180px;
+    }
+
+    .chair{
+        width: 130px;
+    }
+    .paperWithText{
+        width: 400px;
+    }
+    
+}
+
+
+@media screen and (max-width: 650px){
+
+    .content{
+        grid-template-rows: 150px 1fr 200px 100px 150px;
+    }
+
+    .heading{
+        grid-row: 1/2;
+        grid-column: 1/7;
+    }
+    
+    .objects{
+        grid-row: 2/3;
+        grid-column: 1/7;
+        display: inline;
+    }
+    
+    .description{
+        grid-row: 4/5;
+        grid-column: 1/7;
+        vertical-align: middle;
+    }
+    
+    .girl{
+        grid-column: 1/2;
+        grid-row: 2/5;
+    }
+    
+    .bat{
+        grid-column: 5/7;
+        grid-row: 2/3;
+    }
+    
+    .threePumkin{
+        grid-column: 6/7;
+        grid-row: 3/4;
+    }
+    
+    .dirction{
+        grid-column: 2/7;
+        grid-row: 5/6;
+        padding-top: 10px;
+    }
+    
+    .girl img{
+        width: 100px;
+        position: relative;
+        padding-top: 100px;
+    }
+
+    .girl{
+        grid-row: 3/5;
+    }
+    
+    h1{
+        font-size: 1.5em;
+    }
+
+    .threePumkin{
+        grid-row: 2/4;
+    }
+    
+    .nav li a{
+        font-size: 1em;
+    }
+    .backBtn{
+        grid-column: 2/5;
+        grid-row: 3/4;}
+
+    .backBtn img{
+        width: 100px;
+    }
+
+    .glass{
+        width: 100px;
+    }
+
+    .paper{
+        width: 100px;
+    }
+
+    .paperWithText{
+        width: 375px;
+    }
+
+
+}
+
+@media screen and (max-width: 550px){
+    
+    .glass{
+        width: 80px;
+    }
+
+    .paper{
+        width: 80px;
+    }
+
+
+    .chair{
+        width: 100px;
+    }
+
+
+    .girl img{
+        width: 80px;
+    }
+
+    h1{
+        font-size: 1.25em;
+    }
+
+    .ghost{
+        width: 30px;    
+    }
+    
+    .description p{
+      font-size: 1em;
+    }
+
+    .paperWithText{
+        width: 300px;
+    }
+    
+}
